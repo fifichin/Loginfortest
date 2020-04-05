@@ -1,0 +1,142 @@
+body{
+    height: 100vh;
+    color: red;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(./image/backiimageb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body,.container,.datablock,.datablock>div{
+    display: flex;
+}
+body,.container,.datablock{
+    align-items: center;
+}
+.container{
+    margin: 0 auto;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    box-shadow: 4px 4px 12px 2px #DBDBDB;
+    background-color: white;
+}
+.container>div:nth-child(1){
+    background-image: url(./image/backimages.jpg);
+    background-size: cover;
+    color:white;
+    text-align: center;
+}
+.container>div{
+    width:500px;
+    height: 800px;
+}
+.datablock,.datablock>div{
+    flex-direction: column;
+}
+.datablock{
+    justify-content: center;
+}
+.datablock>div{
+    width: 320px;
+    margin: 50px 0px 95px 0px;
+}
+h2{
+    font-size: 4rem;
+}
+a{
+    text-decoration: none;
+    align-self: flex-end;
+    font-size: .5rem;
+}
+a:nth-child(1){
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+a,label,.lightbox>h3{
+    color:rgba(255,0,0,.5);
+}
+label{
+    margin-bottom:8px;
+}
+span>a{
+    color: red;
+}
+input{
+    border:none;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+a,input:nth-child(2){
+    margin-bottom: 50px;
+}
+input:nth-child(2):focus,input:nth-child(4):focus,.lightbox>input:focus{
+    background-color: rgb(195, 195, 195);
+    outline:none;
+    border-bottom: none;
+    padding:15px;
+}
+p{
+    color: rgb(195, 195, 195);
+    text-align: center;
+}
+.submitbtn{
+    font-size: 1.6rem;
+}
+.submitbtn,.sendbtn{
+    border-radius: 10px;
+    background-color: red;
+    color:white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+}
+.submitbtn:hover,.sendbtn:hover{
+    background-color:  rgb(195, 195, 195);
+}
+a:hover{
+    color:  rgb(195, 195, 195);
+}
+/*lightbox*/
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display:none;
+    background-color:rgba(92, 92, 92, .5);
+}
+.lightbox{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width:350px;
+    padding:20px 30px;
+    border-radius: 15px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 889;
+}
+.lightbox>h3{
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+.lightbox>div{
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url(./image/close.png);
+    align-self: flex-end;
+}
+.lightbox>div,.lightbox>button{
+    cursor: pointer;
+}
+.sendbtn{
+    margin-top:30px;
+    width:100px;
+    align-self: center;
+    font-size: 1.3rem;
+}

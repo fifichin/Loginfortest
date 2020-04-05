@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="logintest.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2 class="welsolgan">WELCOME<br>TO TRAVEL</h2>
+        </div>
+        <div class="datablock">
+            <h2>LOGIN</h2>
+            <div>
+                <label>Account</label>
+                <input type="text">
+                <label>Password</label>
+                <input type="password">
+                <a href="#" class="forgetlightbox">forget password?</a>
+                <input type="submit" class="submitbtn" value="Login">
+            </div>
+            <p> Don't have an account?<br>
+                <span><a href="#">Sign up</a></span>
+            </p>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="lightbox">
+            <div class="closebtn"></div>
+            <h3>Please enter your E-mail</h3>
+            <input type="email">
+            <input type="submit" class="sendbtn" value="Send">
+        </div>
+    </div>
+    <script>
+        //the forgetpswlightbox
+        $('.forgetlightbox').click(function(e){
+            e.preventDefault();
+            $('.overlay').show();
+        });
+        $('.closebtn').click(function(){
+            $('.overlay').hide();
+        });
+        $('.sendbtn').click(function(){
+            $('.overlay').hide();
+        });
+    </script>
+</body>
+</html>
